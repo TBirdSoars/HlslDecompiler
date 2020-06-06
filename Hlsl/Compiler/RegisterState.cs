@@ -130,6 +130,11 @@ namespace HlslDecompiler.Hlsl
 
         public string GetRegisterName(RegisterKey registerKey)
         {
+            //
+            // with sonicps.wpu
+            // registryKey has Key Number = 0 and Type = Temp
+            // These values, in combo, match no entry in _registerDeclarations
+            //
             var decl = _registerDeclarations[registerKey];
             switch (registerKey.Type)
             {

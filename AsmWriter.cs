@@ -268,7 +268,10 @@ namespace HlslDecompiler
                     WriteLine("texldl {0}, {1}, {2}", GetDestinationName(instruction),
                         GetSourceName(instruction, 1), GetSourceName(instruction, 2));
                     break;
+                // this needs finished?
                 case Opcode.Comment:
+                    WriteLine("");
+                    break;
                 case Opcode.End:
                     break;
                 default:

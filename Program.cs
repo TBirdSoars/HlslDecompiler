@@ -70,9 +70,15 @@ namespace HlslDecompiler
                             Console.WriteLine("{0}", baseFilename);
                             shader = input.ReadShader();
 
+                            //
+                            // This does not work for vertex shaders
+                            //
                             writer = new AsmWriter(shader);
                             writer.Write($"{baseFilename}.asm");
 
+                            //
+                            // Everything up to this point works for pixel shaders
+                            //
                             hlslWriter = new HlslWriter(shader);
                             hlslWriter.Write($"{baseFilename}.fx");
                         }

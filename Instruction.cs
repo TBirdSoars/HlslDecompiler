@@ -385,6 +385,9 @@ namespace HlslDecompiler
                     {
                         throw new NotImplementedException();
                     }
+                case RegisterType.Loop:
+                    registerTypeName = "loop";
+                    break;
                 default:
                     throw new NotImplementedException();
             }
