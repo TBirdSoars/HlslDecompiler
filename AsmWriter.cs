@@ -113,6 +113,10 @@ namespace HlslDecompiler
         {
             switch (instruction.Opcode)
             {
+                case Opcode.Loop:
+                    WriteLine("loop aL, {1}", GetDestinationName(instruction),
+                        GetSourceName(instruction, 1));
+                    break;
                 case Opcode.Abs:
                     WriteLine("abs {0}, {1}", GetDestinationName(instruction),
                         GetSourceName(instruction, 1));

@@ -385,6 +385,8 @@ namespace HlslDecompiler
                     {
                         throw new NotImplementedException();
                     }
+                // fix this - "loop aL, i0"
+                // also missing every instance of aL
                 case RegisterType.Loop:
                     registerTypeName = "loop";
                     break;
